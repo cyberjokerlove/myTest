@@ -10,8 +10,10 @@ public class PlayerControl : MonoBehaviour
     public float jumpForce = 500;
     private float fInput = 0.0f;
     public float maxSpeed = 5;
-    private bool bFaceRight = true;
+    [HideInInspector]
+    public bool bFaceRight = true;
     private bool bJump = false;
+    //[SerializeField]
     private bool bGrounded = false;
     Transform mGroundcheck;
 

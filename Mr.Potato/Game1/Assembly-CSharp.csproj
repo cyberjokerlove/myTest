@@ -64,8 +64,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\scripts\CameraControl.cs" />
+    <Compile Include="Assets\scripts\BackGrounds.cs" />
+    <Compile Include="Assets\scripts\CameraFollow.cs" />
+    <Compile Include="Assets\scripts\Destroyer.cs" />
+    <Compile Include="Assets\scripts\Gun.cs" />
     <Compile Include="Assets\scripts\PlayerControl.cs" />
+    <Compile Include="Assets\scripts\Rocket.cs" />
     <Reference Include="UnityEngine">
       <HintPath>D:/Unity/2019.4.24f1c1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -597,6 +601,9 @@
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>D:/Unity game/Game1/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Cinemachine">
+      <HintPath>D:/Unity game/Game1/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.2D.Animation.Runtime">
       <HintPath>D:/Unity game/Game1/Library/ScriptAssemblies/Unity.2D.Animation.Runtime.dll</HintPath>
     </Reference>
@@ -660,6 +667,9 @@
     <Reference Include="Unity.2D.Animation.Editor">
       <HintPath>D:/Unity game/Game1/Library/ScriptAssemblies/Unity.2D.Animation.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+      <HintPath>D:/Unity game/Game1/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Mathematics.Editor">
       <HintPath>D:/Unity game/Game1/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
     </Reference>
@@ -674,12 +684,6 @@
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>D:/Unity game/Game1/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Cinemachine">
-      <HintPath>D:/Unity game/Game1/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
-    </Reference>
-    <Reference Include="com.unity.cinemachine.editor">
-      <HintPath>D:/Unity game/Game1/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup></ItemGroup>
