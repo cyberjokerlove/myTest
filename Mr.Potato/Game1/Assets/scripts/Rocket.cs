@@ -11,6 +11,7 @@ public class Rocket : MonoBehaviour
     void Start()
     {
         Destroy(gameObject, 2);//2秒内未碰到物体销毁
+        //explosion = Resources.Load("explosion") as GameObject;//从文件获取预设体对象
     }
 
 
@@ -22,11 +23,11 @@ public class Rocket : MonoBehaviour
         Instantiate(explosion, transform.position, Quaternion.Euler(new Vector3(0, 0, rotationZ)));//实例化
         Destroy(gameObject);//销毁
         }
+
+        if (collision.tag == "Enemy")
+        {
+            collision.gameObject.GetComponent<Enemy>().Hurt();
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

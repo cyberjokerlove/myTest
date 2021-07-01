@@ -12,16 +12,19 @@ public class PlayerControl : MonoBehaviour
     public float maxSpeed = 5;
     [HideInInspector]
     public bool bFaceRight = true;
+    public AudioClip[] jumpClips;
     private bool bJump = false;
     //[SerializeField]
     private bool bGrounded = false;
     Transform mGroundcheck;
+    private Animator anim;
+
 
     void Start()
     {
         heroBody = GetComponent<Rigidbody2D>();
         mGroundcheck = transform.Find("GroundCheck");//找到空物体的位置
-
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -43,10 +46,15 @@ public class PlayerControl : MonoBehaviour
             if (bJump)
             {
                 heroBody.AddForce(upForce* jumpForce);
+                anim.SetTrigger("Jump");//跳跃时播放跳跃动画
+
+                int i = Random.Range(0, jumpClips.Length);
+                AudioSource.PlayClipAtPoint(jumpClips[i], transform.position);//跳跃时播放声音
+
                 bJump = false;
             }
         }
-        
+            anim.SetFloat("speed", Mathf.Abs(heroBody.velocity.x));//速度>0.1播放动画
     }
 
     private void FixedUpdate() {
@@ -57,11 +65,6 @@ public class PlayerControl : MonoBehaviour
 
         if (Mathf.Abs(heroBody.velocity.x) > maxSpeed)
             heroBody.velocity = new Vector2(Mathf.Sign(heroBody.velocity.x) * maxSpeed, heroBody.velocity.y);
-
-        /*if (bJump) {
-            heroBody.AddForce(new Vector2(0f, jumpForce));
-            bJump = false;
-        }*/
     }
 
     void flip() {

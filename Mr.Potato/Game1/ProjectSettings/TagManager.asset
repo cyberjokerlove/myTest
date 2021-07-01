@@ -6,6 +6,11 @@ TagManager:
   tags:
   - body
   - Rocket
+  - Enemy
+  - HealthBar
+  - wall
+  - BombPickup
+  - Ground
   layers:
   - Default
   - TransparentFX
@@ -18,8 +23,8 @@ TagManager:
   - Ground
   - 
   - Confiner
-  - 
-  - 
+  - Enemy
+  - Pickup
   - 
   - 
   - 
@@ -54,4 +59,7 @@ TagManager:
     locked: 0
   - name: Ground
     uniqueID: 2713804395
+    locked: 0
+  - name: UI
+    uniqueID: 1077437323
     locked: 0

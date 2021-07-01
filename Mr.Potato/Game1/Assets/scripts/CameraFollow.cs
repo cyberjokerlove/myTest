@@ -9,8 +9,8 @@ public class CameraFollow : MonoBehaviour
     public float yMargin = 2.0f;
     public float xSpeed = 1.0f;
     public float ySpeed = 1.0f;
-    public Vector2 maxXandY = new Vector2(4, 5);
-    public Vector2 minXandY = new Vector2(-4, -3);
+    public Vector2 maxXandY = new Vector2(7f, 6);
+    public Vector2 minXandY = new Vector2(-5, -7f);
     // Start is called before the first frame update
     void Start()
     {
